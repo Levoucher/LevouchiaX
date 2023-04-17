@@ -1,0 +1,8 @@
+ModIDS = {
+    [2267845829] = true, -- 281
+    [1029012478] = true, -- DEMON
+  
+
+}
+
+return ModIDS
