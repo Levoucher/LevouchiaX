@@ -1,36 +1,3 @@
-local ADMINS = {
-2630809343,
-2321976641,
-1029012478,
-}
-local MODS = {
-2267845829,
-2859615602,
-}
-local STARS = {
-3381276089,
-3158763149 ,
-}
-local BOOSTERS = {
-
-    
-}
-local NOOBEMOJI = {
-
-
-}
-local MONEYNAME = {
-
-}
-local CUSTOMWINNER = {
-
-}
-
-local formatNumber = (function(n)
-    n = tostring(n)
-    return n:reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
-end)
-
 local function checkswag()
     for _, v in ipairs(game:GetService('Workspace').Players:GetChildren()) do
         if v:FindFirstChild('UpperTorso') and not v:FindFirstChild('UpperTorso'):FindFirstChild('OriginalSize') then
@@ -66,29 +33,9 @@ local function checkswag()
         end
     end
 end
-                local plrcheck = game.Players:FindFirstChild(v.Name)
-                if plrcheck then
-                    local plrID = game.Players:FindFirstChild(v.Name).UserId
-                    if plrID == 969017656 or plrID == 200547759 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💠]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif table.find(ADMINS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💎]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif table.find(MODS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🍆]' .. game.Players[v.Name].DisplayName)
-                        end
-           
-                    elseif table.find(STARS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. game.Players[v.Name].DisplayName)
-                        end
-                    end
-                end
 
 local succ, errr = pcall(checkswag)
 
-
+game.Players.PlayerAdded:Connect(function()
+    checkswag()
+end)
