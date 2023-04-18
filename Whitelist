@@ -1,3 +1,30 @@
+local ADMINS = {
+    2630809343,
+    2321976641,
+    1029012478,
+}
+local MODS = {
+    2267845829,
+    2859615602,
+}
+local STARS = {
+    3381276089,
+    3158763149 ,
+}
+local BOOSTERS = {
+}
+local NOOBEMOJI = {
+}
+local MONEYNAME = {
+}
+local CUSTOMWINNER = {
+}
+
+local formatNumber = (function(n)
+    n = tostring(n)
+    return n:reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
+end)
+
 local function checkswag()
     for _, v in ipairs(game:GetService('Workspace').Players:GetChildren()) do
         if v:FindFirstChild('UpperTorso') and not v:FindFirstChild('UpperTorso'):FindFirstChild('OriginalSize') then
