@@ -1,5 +1,6 @@
 local ADMINS = {
     2321976641, -- Levouch
+    1029012478, --Levouch me again
 
 }
 local MODS = {
@@ -76,7 +77,7 @@ local function checklev()
                         if v:FindFirstChildWhichIsA('Humanoid') then           
                             v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('❤') 
                         end
-                     elseif plrID == then
+                     elseif plrID == 3158763149 then
                         if v:FindFirstChildWhichIsA('Humanoid') then           
                             v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🦍👑🐒🤬🤩⭐] kill if gay]' .. game.Players[v.Name].DisplayName) 
                         end
