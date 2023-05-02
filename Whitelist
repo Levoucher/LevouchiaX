@@ -5,7 +5,6 @@ local ADMINS = {
 local MODS = {
 1135487610,
 2771346974,
-3158763149,
 }
 local STARS = {
 
@@ -67,7 +66,7 @@ local function checkswag()
                         end
                      elseif plrID == 1260278612 then
                         if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🦍👑]]' .. game.Players[v.Name].DisplayName) 
+                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥒🦍]]' .. game.Players[v.Name].DisplayName) 
 
 
                         end
